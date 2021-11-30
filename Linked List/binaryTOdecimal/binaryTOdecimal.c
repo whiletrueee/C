@@ -44,15 +44,12 @@ int main(){
     createLinkedList(head,n);
     printLinkedList(head);
     
-    int count=0,i,bin=0;
+    int i,bin=0;
     struct node *it=head;
 
-    while(it!=NULL){
-        count++;
-        it=it->next;
-    }
-    for(i=count;i>=0;i--){
+    for(i=n-1;i>=0;i--){
         bin+=(it->data)*pow(2,i);
+        it=it->next;
     }
     printf("decimal of given binary %d",bin);
 
