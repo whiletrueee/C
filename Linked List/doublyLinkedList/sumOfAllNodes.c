@@ -44,6 +44,15 @@ struct node *display(struct node*head){
     printf("NULL\n");
 }
 
+void sum(struct node*head){
+    struct node *ptr=head;
+    int sum=0;
+    while(ptr!=NULL){
+        sum+=ptr->data;
+        ptr=ptr->next;
+    }
+    printf("Sum of all node is %d",sum);
+}
 struct node *reverseDisplay(struct node*head){
     struct node *rev=head;
     while(rev->next!=NULL){
@@ -65,6 +74,7 @@ int main(){
     create(head,n);
     display(head);
     reverseDisplay(head);
+    sum(head);
     /* write your code below this */
 
     
