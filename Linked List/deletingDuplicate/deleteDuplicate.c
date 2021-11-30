@@ -44,16 +44,16 @@ int main(){
     printLinkedList(head);
     struct node *duplicate=head;
 
-    while(duplicate!=NULL){
+    while(duplicate->next!=NULL){
         struct node * del;
         if(duplicate->data==duplicate->next->data){
             del=duplicate->next;
             duplicate->next=duplicate->next->next;
             free(del);
-        }
+        }else{
         duplicate=duplicate->next;
+        }
     }
-    printf("hello");
     printLinkedList(head);
 
     return 0;
