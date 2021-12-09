@@ -36,7 +36,7 @@ struct node *create(struct node*head,int n){
 struct node *display(struct node*head){
     struct node *ptr=head;
     struct node *q=head->next->next;
-    printf("q data->%d\n",q->data);
+    
     while(ptr!=NULL){
         printf("%d->",ptr->data);
         ptr=ptr->next;
@@ -56,7 +56,6 @@ struct node *reverseDisplay(struct node*head,int k){
         k--;
     }
 }
-
 
 
 int reverseAndAdd(struct node* head1, struct node * head2){
@@ -106,6 +105,7 @@ int main(){
     create(head2,n);
     display(head2);
     /* write your code below this */
+    reverse(head1);
     printf("addition of two numbers %d ",reverseAndAdd(head1,head2));
     
     

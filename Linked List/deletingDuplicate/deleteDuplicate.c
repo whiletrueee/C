@@ -42,6 +42,7 @@ int main(){
     struct node * head = (struct node*)(malloc(sizeof(struct node)));
     struct node * q = createLinkedList(head,n);
     printLinkedList(head);
+    
     struct node *duplicate=head;
 
     while(duplicate->next!=NULL){
